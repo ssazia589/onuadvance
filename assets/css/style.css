@@ -1,0 +1,282 @@
+/* common code start */
+:root{
+    --brand-color:#42c257;
+    --light-color:#fff;
+    --dark-color:#030303;
+    --soft-color:#e1e1e1;
+    --soft-dark: #39393a;
+    --transition: .5s linear;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    min-width: 400px;
+}
+.brand-color{
+    color:#42c257;
+}
+text-justify{
+    text-align: justify;
+}
+/* common code end */
+/* nav section start */
+.navbar{
+    position: relative;
+    z-index: 1;
+    height: 100px;
+}
+.nav-link{
+    font-weight: 600;
+    color: var(--light-color);
+}
+.nav-link:focus, 
+.nav-link:hover {
+    color: var(--brand-color);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: var(--brand-color);
+}
+/* nav section end */
+/* banner section start */
+.banner-section{
+    background: url(../images/banner.jpg) no-repeat;
+    /* height: 675px; */
+    margin-top: -120px;
+}
+.carousel-indicators [data-bs-target] {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    border-radius: 50%;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+} 
+.carousel-indicators .active{
+    background:var(--brand-color);
+}   
+/* banner section end */
+/* about us section start */
+about-us-section .content-area{
+    cursor: pointer;
+}
+about-us-section .content-area i,
+about-us-section .content-area h3{
+    transition: var(--transition);
+}
+.about-us-section .content-area:hover i,
+.about-us-section .content-area:hover h3{
+    color: var(--brand-color);
+}
+/* about us section end */
+/* services section start */
+.services-section{
+    background-color: var(--soft-color);
+}
+.services-section .content-area{
+    position: relative;
+    overflow: hidden;
+}
+.services-section .content-overlay{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    transition: var(--transition);
+    /* visibility: hidden; */
+    transform: scale(0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services-section .content-area:hover .content-overlay{
+    background: rgba(0,0,0,.3);
+    top: 0px;
+    left: 0px;
+    /* visibility: visible; */
+    transform: scale(1);
+}
+.services-section .content-overlay a{
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 50%;
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+    margin: 0px 5px;
+}
+.services-section .content-overlay:hover a{
+    background: var(--brand-color);
+    color: var(--light-color);
+}
+/* services section end */
+/* portfolio section start */
+.portfolio-section .nav-link{
+    padding: 10px 10px;
+    background: var(--dark-color);
+    margin: 0px 5px;
+    border-radius: 0px;
+    color: var(--light-color);
+}
+.portfolio-section .nav-pills .nav-link.active, 
+.portfolio-section .nav-pills .show>.nav-link, 
+.portfolio-section .nav-pills .nav-link:hover{
+    color: var(--light-color);
+    background-color: var(--brand-color);
+}
+.portfolio-section .content-area{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.portfolio-section .content-overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+
+    transform: scale(0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+.portfolio-section .content-area:hover .content-overlay{
+    transform: scale(1);
+}
+.portfolio-section .content-overlay a{
+    color: var(--light-color);
+    font-size: 2rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.portfolio-section .content-overlay a:hover{
+    color: var(--brand-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+/* portfolio section end */
+/* pricing section start */
+.pricing-section .content-area{
+    background: var(--soft-dark);
+    color: var(--light-color);
+    padding: 50px;
+}
+.pricing-section .content-area .content-header{
+    border: 4px solid var(--light-color);
+    border-radius: 50%;
+    margin-bottom: 15px;
+    height: 180px;
+    weight: 180px;
+    padding: 30px 0px;
+    transition: var(--transition);
+}
+.pricing-section.content-area .content-header sup{
+    font-weight: 800;
+}
+.pricing-section .content-area .content-header h3 small{
+    font-size: 1rem;
+}
+.pricing-section .content-area .content-body li{
+    border-bottom: 1px solid var(--light-color);
+    margin-bottom: 15px;
+}
+.pricing-section .content-area .content-body li a{
+    display: block;
+    background: var(--light-color);
+    padding: 10px 20px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+.pricing-section .content-area:hover .content-body li a,
+.pricing-section .content-area.active .content-body li a{
+    color: var(--brand-color);
+}
+.pricing-section .content-area{
+    transition: var(--transition);
+    cursor: pointer;
+}
+.pricing-section .content-area:hover,
+.pricing-section .content-area.active{
+    background: var(--brand-color);
+}
+.pricing-section .content-area:hover .content-header,
+.pricing-section .content-area.active .content-header{
+    color: var(--brand-color);
+    background: var(--light-color);
+}
+/* pricing section end */
+/* counter section start */
+.counter-section{
+    background: url(../images/counter.jpg) no-repeat center;
+    margin: 60px;
+    box-sizing: border-box;
+}
+.counter-section .box-area h2{
+
+}
+/* counter section end */
+/* contact us section start */
+.contact-section .content-area{
+    background: var(--light-color);
+    cursor: pointer; 
+}
+.contact-section .content-area i,
+.contact-section .content-area h6{
+    transition: var(--transition);
+}
+.contact-section .content-area:hover i,
+.contact-section .content-area:hover h6{
+    color: var(--brand-color);
+}
+/* contact us section end */
+/* keep in touch section start */
+.keep-in-touch-section{
+    background: var(--soft-color);
+}
+.keep-in-touch-section input,
+.keep-in-touch-section textarea,
+.keep-in-touch-section button{
+    border-radius: 0px;
+}
+.btn-primary{
+    /* color: var(--soft-color); */
+    background: var(--soft-dark);
+} 
+.btn-primary:hover{
+    background: var(--brand-color);
+    border: 1px solid var(--brand-color);
+}
+/* keep in touch section end */
+/* google map section start */
+.google-map-section iframe{
+      min-height: 300px;
+      min-width: 100%;
+}
+/* google map section end */
+/* footer section start */
+.footer-section{
+    background: var(--soft-dark);
+
+}
+.footer-section p{
+    color: var(--light-color);
+}
+.footer-section a{
+    color: var(--light-color);
+}
+.footer-section ul li a:hover{
+    color: var(--brand-color);
+}
+.footer-section ul li a{
+    transition: var(--transition);
+}
+/* footer section end */
